@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   name: vpro-ingress
   annotations:
-  nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
-  ingressClaimName: nginx
+  ingressClassName: nginx
   rules:
   - host: vprofile.mydevopsjourney.quest
     http:
@@ -17,3 +17,4 @@ spec:
             name: vproapp-service
             port: 
               number: 8080
+
